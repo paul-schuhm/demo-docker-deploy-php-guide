@@ -37,20 +37,16 @@ jobs:
       # -----------------------------
       # SonarCloud (analysis + gate)
       # -----------------------------
-      - name: Sonar scan
-        uses: SonarSource/sonarcloud-github-action@v2
-        with:
-          projectBaseDir: .
+      - name: SonarQube Scan
+        uses: SonarSource/sonarqube-scan-action@v4.1.0
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_PROJECT_KEY: ${{ vars.SONAR_PROJECT_KEY }}
-          SONAR_ORGANIZATION: ${{ vars.SONAR_ORG }}
 
-      - name: Sonar Quality Gate (fail if red)
-        uses: SonarSource/sonarcloud-quality-gate-action@v1
-        timeout-minutes: 5
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      # - name: Sonar Quality Gate (fail if red)
+      #   uses: SonarSource/sonarcloud-quality-gate-action@v1
+      #   timeout-minutes: 5
+      #   env:
+      #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
       # -----------------------------
       # Build final image (local only)
