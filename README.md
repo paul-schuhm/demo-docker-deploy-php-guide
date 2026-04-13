@@ -7,11 +7,21 @@ A simple PHP web application example for [Docker's PHP Language Guide](https://d
 - Docker
 - Disposer d'un compte sur Docker Inc (Hub, Scout);
 - Disposer d'un compte gratuit sur Sonarcloud (SonarQube);
+- [Suivre le guide initial](https://docs.docker.com/language/php/) ;
 
 ## Variations apportées
 
 - Ajout d'un script de pre-commit (pré-CI, en local : tests et lint). Pour l'installer : `cp pre-commit .git/hooks`
-- Ajout d'un step analyse par SonarQube ;
+- Ajout d'un step analyse par SonarQube (SonarCloud). Pour cela :
+  - Ajouter un secret `SONAR_TOKEN` Github Actions sur le dépôt Github ;
+  - Créer un fichier `sonar-project.properties` à la racine du dépôt avec les données sur votre projet SonarCloud :
+
+~~~
+sonar.organization=
+sonar.projectKey=
+sonar.sources=
+~~~
+
 - Ajout d'un step analyse de l'image par Docker Scout;
 
 ## Liens utiles
