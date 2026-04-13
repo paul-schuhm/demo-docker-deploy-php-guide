@@ -10,6 +10,7 @@ A simple PHP web application example for [Docker's PHP Language Guide](https://d
 
 ## Variations apportées
 
+- Ajout d'un script de pre-commit (pré-CI, en local : tests et lint). Pour l'installer : `cp pre-commit .git/hooks`
 - Ajout d'un step analyse par SonarQube ;
 - Ajout d'un step analyse de l'image par Docker Scout;
 
