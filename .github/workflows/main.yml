@@ -61,13 +61,13 @@ jobs:
       # -----------------------------
       # Docker Scout (fail on critical)
       # -----------------------------
-      # - name: Docker Scout CVE scan (gating)
-      #   uses: docker/scout-action@v1
-      #   with:
-      #     image: ${{ vars.DOCKER_USERNAME }}/${{ github.event.repository.name }}:ci
-      #     command: cves
-      #     only-severities: critical
-      #     exit-code: true
+      - name: Docker Scout CVE scan (gating)
+        uses: docker/scout-action@v1
+        with:
+          image: ${{ vars.DOCKER_USERNAME }}/${{ github.event.repository.name }}:ci
+          command: cves
+          only-severities: critical
+          exit-code: true
 
       # -----------------------------
       # Push only if everything passed

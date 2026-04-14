@@ -23,6 +23,7 @@ sonar.sources=
 ~~~
 
 - Ajout d'un step analyse de l'image par Docker Scout;
+- CD : déploiement de l'artefact
 
 ## Liens utiles
 
