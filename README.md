@@ -25,6 +25,11 @@ sonar.sources=
 - Ajout d'un step analyse de l'image par Docker Scout;
 - CD : déploiement de l'artefact
 
+## Points à améliorer
+
+- Refactoriser le fichier de CI en plusieurs fichiers ;
+- Test runner container pour lancer une série de tests d'intégration (black box) de l'image de prod (plutot que de le faire depuis les steps de la CI directement comme ici)
+
 ## Liens utiles
 
 - [Events that trigger workflows](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows), documentation de Github Actions
