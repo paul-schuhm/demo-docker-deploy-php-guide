@@ -121,5 +121,5 @@ jobs:
       - name: Push image
         run: |
           docker push ${{ vars.DOCKER_USERNAME }}/${{ github.event.repository.name }}:${{ github.sha }}
-          docker tag ${{ vars.DOCKER_USERNAME }}/${{ github.event.repository.name }}:${{ github.sha }}:latest
+          docker tag ${{ vars.DOCKER_USERNAME }}/${{ github.event.repository.name }}:latest
           docker push ${{ vars.DOCKER_USERNAME }}/${{ github.event.repository.name }}:latest
