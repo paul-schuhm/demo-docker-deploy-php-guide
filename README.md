@@ -35,3 +35,5 @@ sonar.sources=
 - [Events that trigger workflows](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows), documentation de Github Actions
 - [Scan your code with SonarQube](https://github.com/marketplace/actions/official-sonarqube-scan), documentation officielle de Github Actions
 - [Adding analysis to GitHub Actions workflow](https://docs.sonarsource.com/sonarqube-server/devops-platform-integration/github-integration/adding-analysis-to-github-actions-workflow)
+- [act](https://github.com/nektos/act), test les Github Action localement avant de les executer sur Github
+- [actionlint](https://github.com/rhysd/actionlint), analyseur statique des fichiers de Github Actions
